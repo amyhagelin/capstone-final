@@ -1,4 +1,4 @@
-import * as authActions from '../constants/authActionTypes'
+import * as authActions from '../constants/actionTypes'
 
 console.log(authActions.LOGIN)
 
@@ -9,10 +9,11 @@ const initialState = {
 
 const auth = (state = initialState, action) => {
     switch (action.type) {
-        case authActions.LOGIN: 
+        case authActions.LOGIN_SUCCESS: 
             return {
                 ...state,
-                isLoggedIn: true
+                isLoggedIn: true,
+                token: action.token
             }
         default: 
             return state

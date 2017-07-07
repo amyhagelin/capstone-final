@@ -5,9 +5,13 @@
 import {createStore, applyMiddleware} from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-// import thunk from 'redux-thunk';
+import thunk from 'redux-thunk';
 
-import auth from '../reducers/auth'
+// import auth from '../reducers/auth'
 import combinedReducers from '../reducers/index';
 
-export default createStore(auth, composeWithDevTools());
+export default createStore(
+    combinedReducers, 
+    composeWithDevTools(), 
+    applyMiddleware(thunk)
+);
