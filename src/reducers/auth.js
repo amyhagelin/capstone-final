@@ -15,6 +15,12 @@ const auth = (state = initialState, action) => {
                 isLoggedIn: true,
                 token: action.token
             }
+        case authActions.LOGOUT: 
+            return {
+                ...state,
+                isLoggedIn: false,
+                token: null
+            }
         default: 
             return state
     }

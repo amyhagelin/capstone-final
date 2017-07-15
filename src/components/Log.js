@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux';
 import SingleEventComponent from './Event';
+import { getEvents } from '../actions/getEvents';
 
 class Log extends Component {
-	render() {
-        const log = ['anything']
+	componentDidMount () {
+		this.props.dispatch(getEvents());
+		console.log('dispatch get events from log')
+		console.log(this.props.eventLog)
 
+	}
+
+	render() {
 		return (
 			<div>
-				<div>Log</div>
+				<h2>Seizure List</h2>
 				{ 
-					log.map((singleEvent) => {
-						return singleEvent
+					this.props.eventLog.map((singleEvent) => {
+						return <SingleEventComponent key={ singleEvent._id } event={ singleEvent } />
 					}) 
 				}	
 			</div>
@@ -19,9 +25,9 @@ class Log extends Component {
 	}
 }
 
-export default Log
-// const mapStateToProps = state => ({
-//     // count: state.guesses.length
-// });
 
-// export default connect(mapStateToProps)(Log);
+const mapStateToProps = state => ({
+    eventLog: state.event.log
+});
+
+export default connect(mapStateToProps)(Log);

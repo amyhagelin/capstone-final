@@ -24,7 +24,9 @@ export const login = (username, password) => dispatch => {
     })
     .then((response) => response.json())
     .then((response) => {
-        console.log(response)
+        if (localStorage) {
+            localStorage.setItem('accessToken', response.token)
+        }
         dispatch({ type: LOGIN_SUCCESS, token: response.token })
     })
     .catch(() => {

@@ -24,14 +24,19 @@ export class Login extends React.Component {
     render() {
         return (
             <div>
-                <form>
-                    Username: <input type="text" ref={ input => this.usernameInput = input }/>
-                    Password: <input type="text" ref={ input => this.passwordInput = input }/>
-                    <button onClick={e => this.auth(e)} >
-                        Login
-                    </button>
-                </form>
-                <Link to="/dashboard">Dashboard</Link>
+                <header><Link to="/">Home</Link></header>
+                <section className="min-height abstract-background">
+                    <form className="nav-padding">
+                        <input placeholder="YOUR USERNAME" type="text" ref={ input => this.usernameInput = input }/>
+                        <br/>
+                        <input placeholder="YOUR PASSWORD" type="text" ref={ input => this.passwordInput = input }/>
+                        <br/>
+                        <button className="button" onClick={e => this.auth(e)} >
+                         Log In                       
+                        </button>
+                    </form>
+                    <Link to="/dashboard">Dashboard</Link>
+                </section>
             </div>
         );
     }
