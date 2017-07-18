@@ -84,6 +84,11 @@ div.content {
   padding-bottom: 40px;
 }
 
+div.graphs {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
 .welcome-mat {
   background-attachment: fixed;
 }

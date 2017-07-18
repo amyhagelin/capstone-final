@@ -20,7 +20,7 @@ const Dashboard = () => (
             <Logout />
         </header>
         <section id="graphs" className="nav-padding" >
-            <div className="content"><Graphs /></div>
+            <div className="content graphs"><Graphs /></div>
         </section>
         <section id="new" className="abstract-background">
             <div className="content"><NewEvent /></div>

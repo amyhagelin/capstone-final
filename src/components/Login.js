@@ -36,6 +36,7 @@ export class Login extends React.Component {
                         </button>
                     </form>
                     <Link to="/dashboard">Dashboard</Link>
+                    <div className="alert"></div>
                 </section>
             </div>
         );

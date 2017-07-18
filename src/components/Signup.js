@@ -31,6 +31,7 @@ export class Signup extends React.Component {
                     </button>
                 </form>
                 <Link to="/dashboard">Dashboard</Link>
+                <div className="alert"></div>
                 </section>
             </div>
         );

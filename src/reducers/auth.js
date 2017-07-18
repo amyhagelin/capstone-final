@@ -4,7 +4,8 @@ console.log(authActions.LOGIN)
 
 const initialState = {
     token: null,
-    isLoggedIn: false
+    isLoggedIn: false,
+    theError: null
 }
 
 const auth = (state = initialState, action) => {
@@ -20,6 +21,11 @@ const auth = (state = initialState, action) => {
                 ...state,
                 isLoggedIn: false,
                 token: null
+            }
+        case authActions.LOGIN_FAILURE:
+            return {
+                ...state,
+                theError: action.error
             }
         default: 
             return state

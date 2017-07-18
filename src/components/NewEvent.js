@@ -54,6 +54,7 @@ export class NewEvent extends React.Component {
 				<button className="button">Save</button>
 				</div>
 			    </form>
+				<div className="alert"></div>
             </div>
         );
     }
