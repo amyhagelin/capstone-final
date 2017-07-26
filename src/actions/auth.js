@@ -21,7 +21,7 @@ export const login = (username, password) => dispatch => {
         return response.json()
     })
     .then((response) => {
-        if (localStorage) {
+        if (window.localStorage) {
             localStorage.setItem('accessToken', response.token)
         }
         // if (response.status === 200) {

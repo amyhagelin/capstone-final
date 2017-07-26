@@ -15,7 +15,7 @@ import LandingPage from './containers/LandingPage';
 import store from './store';
 import { LOGIN_SUCCESS } from './constants/actionTypes';
 
-if (localStorage && localStorage.getItem('accessToken')) {
+if (window.localStorage && localStorage.getItem('accessToken')) {
   store.dispatch({ type: LOGIN_SUCCESS, token: localStorage.getItem('accessToken') })
 }
 
