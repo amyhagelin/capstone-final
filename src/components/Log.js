@@ -3,7 +3,11 @@ import {connect} from 'react-redux';
 import SingleEventComponent from './Event';
 import { getEvents } from '../actions/getEvents';
 
-class Log extends Component {
+export class Log extends Component {
+	static defaultProps = {
+		eventLog: []
+	}
+	
 	componentDidMount () {
 		this.props.dispatch(getEvents());
 		console.log('dispatch get events from log')
