@@ -5,7 +5,7 @@ import { getEvents } from '../actions/getEvents';
 import { Pie } from 'react-chartjs-2';
 import {Line} from 'react-chartjs-2';
 
-import groupBy from 'lodash/groupBy';
+// import groupBy from 'lodash/groupBy';
 import _ from 'lodash';
 
 

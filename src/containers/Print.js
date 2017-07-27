@@ -1,5 +1,4 @@
 import React from 'react'
-import NewEvent from '../components/NewEvent'
 import Log from '../components/Log'
 import Graphs from '../components/Graphs'
 

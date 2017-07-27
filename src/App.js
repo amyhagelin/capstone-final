@@ -3,10 +3,8 @@ import {Provider} from 'react-redux';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom'
 
-import EmailList from './components/EmailList';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Dashboard from './containers/Dashboard';
