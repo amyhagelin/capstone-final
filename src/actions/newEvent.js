@@ -1,9 +1,10 @@
 import { NEWEVENT, NEWEVENT_SUCCESS, NEWEVENT_FAILURE } from '../constants/actionTypes';
+import { BACKEND_URL } from '../constants/config';
 
 export const newEvent = (date, time, type, triggers, location, medication, notes) => (dispatch, getState) => {
     dispatch({ type: NEWEVENT })
 
-    fetch('http://localhost:8080/events', {
+    fetch(`${BACKEND_URL}/events`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

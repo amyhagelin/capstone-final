@@ -1,9 +1,10 @@
 import { SIGNUP, SIGNUP_SUCCESS, SIGNUP_FAILURE } from '../constants/actionTypes';
+import { BACKEND_URL } from '../constants/config';
 
 export const signup = (username, password) => dispatch => {
     dispatch({ type: SIGNUP })
 
-    fetch('http://localhost:8080/users/signup', {
+    fetch(`${BACKEND_URL}/users/signup`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

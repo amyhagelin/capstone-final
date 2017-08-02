@@ -5,12 +5,16 @@ import Graphs from '../components/Graphs'
 import { Link } from 'react-router-dom'
 
 const Print = () => (
-    <div>
+    <div className="print">
         <header>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/dashboard">Return to Dashboard</Link>
         </header>
-        <section id="graphs" className="nav-padding"><Graphs /></section>
-        <section id="log"><Log /></section>
+        <section id="graphs" className="nav-padding" >
+            <div className="content graphs"><Graphs /></div>
+        </section>
+        <section id="log">
+            <div className="content"><Log /></div>
+        </section>
     </div>
 )
 
