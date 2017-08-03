@@ -94,9 +94,8 @@ div.graphs {
 }
 
 .welcome-text {
-  width: 600px;
+  max-width: 600px;
   padding-top: 80px;
-  /*padding-left: 30%;*/
   margin: 0 auto;
   text-align: center;
 }
@@ -131,7 +130,7 @@ div.graphs {
 }
 
 .why-track ul {
-  width: 500px;
+  max-width: 500px;
   text-align: left;
   margin: 0 auto;
   }
@@ -165,27 +164,20 @@ ul > a {
 }
 
 .landing-page footer {
-  text-align: left;
+  text-align: center;
   color: white;
   height: 50px;
   background-color: #253C6A;
   width: 100%;
   padding-top: 10px;
-  /*padding-left: 10px;*/
 }
 
 .byline {
-  padding-left: 20px;
+  padding-top: 10px;
 }
 
-.credit {
-  color: gray;
-  font-size: 12px;
-  margin-left: 20px;
-}
-
-.credit a {
-  color: gray;
+.byline a {
+  color: white;
   text-decoration: none;
 }
 

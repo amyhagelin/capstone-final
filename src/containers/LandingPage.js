@@ -29,7 +29,7 @@ const LandingPage = () => (
             <br/>
             <ul>
             <h3>The <a href="http://www.epilepsy.com/get-help/managing-your-epilepsy/tracking-my-seizures/importance-tracking-seizures">
-            Epilepsy Foundation</a> considers tracking seizures a crucial part of evaluating and improving a treatment plan.
+            Epilepsy Foundation</a> considers tracking seizures an important part of evaluating and improving a treatment plan.
             <br/>
             <br/>
             Keeping track of seizures can help:</h3>
@@ -52,7 +52,7 @@ const LandingPage = () => (
             </div>
             <div className="inline-block">
                 <h2>Share</h2>
-                Easily download and share your records with your doctor to use this crucial information in evaluating your treatment plan. 
+                Easily download and share your records with your doctor to use this information in evaluating your treatment plan. 
             </div>
             </div>
         </section>
@@ -66,11 +66,7 @@ const LandingPage = () => (
              </div>
         </section>
         <footer>
-            <div className="byline">Built by Amy Hagelin</div>
-            <div className="credit">
-            <a href="https://www.vexels.com/vectors/preview/143710/colorful-abstract-background"> Colorful abstract background </a> 
-            and<a href="https://www.vexels.com/vectors/preview/143687/medicine-and-healthcare-icon-set">Medicine and healthcare icon set </a> | designed by Vexels
-            </div>
+            <div className="byline">Built by <a href="https://amyhagelin.github.io/portfolio/">Amy Hagelin</a></div>
         </footer>
     </div>
 )
