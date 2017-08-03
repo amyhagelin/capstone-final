@@ -25,7 +25,9 @@ const Dashboard = () => (
         <section id="new" className="abstract-background">
             <div className="content"><NewEvent /></div>
         </section>
-        <section id="log" className="blue"><div className="content"><Log /></div></section>
+        <section id="log" className="blue">
+            <div className="content"><Log /></div>
+        </section>
         <section id="share" className="blue">
             <Link to="/print" className="button">View Printable List</Link>
         </section>

@@ -54,11 +54,17 @@ export class NewEvent extends React.Component {
 				<button className="button">Save</button>
 				</div>
 			    </form>
-				<div className="alert"></div>
+				<div className="alert">
+					{ this.props.alert && this.props.alert.title }
+				</div>
             </div>
         );
     }
 
 };
 
-export default connect()(NewEvent);
+const mapStateToProps = state => ({
+    alert: state.ui.alert
+});
+
+export default connect(mapStateToProps)(NewEvent);

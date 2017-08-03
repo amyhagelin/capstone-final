@@ -259,3 +259,7 @@ input[type=date] {
 .print > header a {
   color: #253C6A;
 }
+
+.alert {
+    color: #F82D40;
+}

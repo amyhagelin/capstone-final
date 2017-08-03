@@ -30,7 +30,6 @@ export class Signup extends React.Component {
                         Sign Up
                     </button>
                 </form>
-                <Link to="/dashboard">Dashboard</Link>
                 <div className="alert"></div>
                 </section>
             </div>

@@ -26,6 +26,8 @@ export class Login extends React.Component {
             <div>
                 <header><Link to="/">Home</Link></header>
                 <section className="min-height abstract-background">
+                    {/*{ this.props.state.ui.alert && this.props.state.ui.alert.location === 'login' && <Alert /> }*/}
+                    { this.props.alert && this.props.alert.title }
                     <form className="nav-padding">
                         <input placeholder="YOUR USERNAME" type="text" ref={ input => this.usernameInput = input }/>
                         <br/>
@@ -35,9 +37,10 @@ export class Login extends React.Component {
                          Log In                       
                         </button>
                     </form>
-                    <Link to="/dashboard">Dashboard</Link>
                     {/*{ isErrorForLoginPage && <Alert errorMessage={} /> }*/}
-                    <div className="alert"></div>
+                    <div className="alert">
+                        { this.props.alert && this.props.alert.title }
+                    </div>
                 </section>
             </div>
         );
@@ -45,5 +48,11 @@ export class Login extends React.Component {
 
 };
 
-export default connect()(Login);
 
+
+const mapStateToProps = state => ({
+    alert: state.ui.alert
+});
+
+
+export default connect(mapStateToProps)(Login);

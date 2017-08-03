@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Route,
 } from 'react-router-dom'
+import { ConnectedRouter } from 'react-router-redux';
 
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Dashboard from './containers/Dashboard';
 import Print from './containers/Print';
 import LandingPage from './containers/LandingPage';
-import store from './store';
+import store, { history } from './store';
 import { LOGIN_SUCCESS } from './constants/actionTypes';
 
 if (window.localStorage && localStorage.getItem('accessToken')) {
@@ -22,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <Provider store={store}>
-          <Router>
+          <ConnectedRouter history={history}>
             <div>
               <Route exact path="/" component={ LandingPage } />
               <Route exact path="/login" component={ Login } />
@@ -30,7 +31,7 @@ class App extends Component {
               <Route exact path="/dashboard" component={ Dashboard } />
               <Route exact path="/print" component={ Print } />
             </div>
-          </Router>
+          </ConnectedRouter>
         </Provider>
       </div>
     );
