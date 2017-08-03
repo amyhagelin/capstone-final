@@ -30,7 +30,9 @@ export class Signup extends React.Component {
                         Sign Up
                     </button>
                 </form>
-                <div className="alert"></div>
+                <div className="alert">
+                    { this.props.alert && this.props.alert.title }
+                </div>
                 </section>
             </div>
         );
@@ -38,5 +40,9 @@ export class Signup extends React.Component {
 
 };
 
-export default connect()(Signup);
+const mapStateToProps = state => ({
+    alert: state.ui.alert
+});
+
+export default connect(mapStateToProps)(Signup);
 

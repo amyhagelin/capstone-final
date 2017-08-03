@@ -27,7 +27,6 @@ export class Login extends React.Component {
                 <header><Link to="/">Home</Link></header>
                 <section className="min-height abstract-background">
                     {/*{ this.props.state.ui.alert && this.props.state.ui.alert.location === 'login' && <Alert /> }*/}
-                    { this.props.alert && this.props.alert.title }
                     <form className="nav-padding">
                         <input placeholder="YOUR USERNAME" type="text" ref={ input => this.usernameInput = input }/>
                         <br/>
