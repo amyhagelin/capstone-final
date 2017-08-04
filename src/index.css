@@ -259,3 +259,7 @@ input[type=date] {
 .alert {
     color: #F82D40;
 }
+
+.graph {
+  padding-bottom: 30px;
+}

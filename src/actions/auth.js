@@ -1,7 +1,7 @@
 import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE } from '../constants/actionTypes';
 import { BACKEND_URL } from '../constants/config';
 import { push } from 'react-router-redux';
-import { showAlert } from './ui'
+import { showAlert, clearAlert } from './ui'
 
 export const login = (username, password) => dispatch => {
     dispatch({ type: LOGIN })
@@ -20,6 +20,7 @@ export const login = (username, password) => dispatch => {
         if (response.status !== 200) {
             dispatch(showAlert('login', 'Incorrect username or password'))
             throw new Error('Incorrect username or password')
+            setTimeout(function(){dispatch(clearAlert())}, 3000)
         }
 
         return response.json()
