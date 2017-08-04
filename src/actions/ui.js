@@ -8,3 +8,7 @@ export const showAlert = (location, title) => ({
         title
     }
 })
+
+export const clearAlert = () => ({
+    type: actions.CLEAR_ALERT,
+})

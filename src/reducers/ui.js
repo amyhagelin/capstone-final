@@ -11,6 +11,11 @@ const ui = (state = initialState, action) => {
                 ...state,
                 alert: action.payload
             }   
+        case actions.CLEAR_ALERT: 
+            return {
+                ...state,
+                alert: null
+            }
         default: 
             return state
     }

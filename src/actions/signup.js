@@ -1,6 +1,5 @@
 import { SIGNUP, SIGNUP_SUCCESS, SIGNUP_FAILURE } from '../constants/actionTypes';
 import { BACKEND_URL } from '../constants/config';
-import { push } from 'react-router-redux';
 import { showAlert } from './ui'
 import { login } from './auth';
 
