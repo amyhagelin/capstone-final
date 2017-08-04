@@ -89,7 +89,6 @@ class Graphs extends Component {
 
 		return (
 			<div>
-				Graphs Go Here
                 <Pie data={ data } />  
                 <Line data={ dataLine} options={ dataLine.options }/>
 			</div>
