@@ -9,7 +9,7 @@ const Print = () => (
         <header>
             <Link to="/dashboard">Return to Dashboard</Link>
         </header>
-        <section id="graphs" className="nav-padding" >
+        <section id="graphs" className="dash-nav-padding" >
             <div className="content graphs"><Graphs /></div>
         </section>
         <section id="log">

@@ -102,8 +102,10 @@ class Graphs extends Component {
 		return (
 			<div>
                 <h2>My Dashboard</h2>
-                <Pie className="graph" data={ data } />  
-                <Line className="graph" data={ dataLine} options={ dataLine.options }/>
+                <div className="graph-spacing"></div>
+                    <Pie data={ data } />  
+                <div className="graph-spacing"></div>
+                    <Line className="graph" data={ dataLine} options={ dataLine.options }/>
 			</div>
 		);
 	}

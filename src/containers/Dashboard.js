@@ -14,7 +14,7 @@ const Dashboard = () => (
             <a href="#share">Share</a>
             <Logout />
         </header>
-        <section id="graphs" className="nav-padding" >
+        <section id="graphs" className="dash-nav-padding" >
             <div className="content graphs"><Graphs /></div>
         </section>
         <section id="new" className="abstract-background">
