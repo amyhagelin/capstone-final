@@ -21,7 +21,7 @@ export class Login extends React.Component {
                 <section className="min-height abstract-background">
                     {/*{ this.props.state.ui.alert && this.props.state.ui.alert.location === 'login' && <Alert /> }*/}
                     <form className="nav-padding">
-                        <h3>To enter demo mode use Username: demo / Password: 123</h3>
+                        <h3>To enter demo mode use Username: demomode / Password: 123</h3>
                         <input placeholder="YOUR USERNAME" type="text" ref={ input => this.usernameInput = input }/>
                         <br/>
                         <input placeholder="YOUR PASSWORD" type="password" ref={ input => this.passwordInput = input }/>

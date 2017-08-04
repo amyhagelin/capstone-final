@@ -3,7 +3,7 @@ import moment from "moment";
 
 const Event = (props) => 
 <div className="single-event">
-    { moment(props.event.date).format("MMMM D, YYYY") } { props.event.time } { props.event.location } { props.event.type }
+    { moment(props.event.date).format("MMMM D, YYYY") } | { props.event.time } | { props.event.location } | { props.event.type }
     <br/>
     Triggers: { props.event.triggers } <br/>
     Medication: { props.event.medication } <br/>

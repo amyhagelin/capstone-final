@@ -19,8 +19,8 @@ export class NewEvent extends React.Component {
 			dateValue, 
 			timeValue,
 			typeValue,
-			locationValue,
 			triggersValue,
+			locationValue,
 			medicationValue,
 			notesValue
 		));
@@ -47,13 +47,13 @@ export class NewEvent extends React.Component {
 				<input placeholder="TIME" type="text" ref={ input => this.timeInput = input } /><br />
 				<select name="type" ref={ input => this.typeInput = input }>
 					<option value="" disabled selected>SEIZURE TYPE</option>
-					<option value="aura">Aura</option>
-		 			<option value="absence">Absence</option>
-		  			<option value="atonic-">Atonic</option>
-		 			<option value="clonic">Clonic</option>
-		 			<option value="myoclonic">Myoclonic</option>
-		  			<option value="tonic">Tonic</option>
-		  			<option value="tonic-clonic">Tonic-Clonic</option>
+					<option value="Aura">Aura</option>
+		 			<option value="Absence">Absence</option>
+		  			<option value="Atonic-">Atonic</option>
+		 			<option value="Clonic">Clonic</option>
+		 			<option value="Myoclonic">Myoclonic</option>
+		  			<option value="Tonic">Tonic</option>
+		  			<option value="Tonic-clonic">Tonic-Clonic</option>
 	  			</select>
 	  			<br />
 				<input placeholder="TRIGGERS" type="text" ref={ input => this.triggersInput = input } /><br />

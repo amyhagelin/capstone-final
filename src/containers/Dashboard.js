@@ -5,11 +5,6 @@ import Logout from '../components/Logout'
 import Graphs from '../components/Graphs'
 import { Link } from 'react-router-dom'
 
-
-// graphs
-// input form
-// log
-
 const Dashboard = () => (
     <div>
         <header>
