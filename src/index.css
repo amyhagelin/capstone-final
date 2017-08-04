@@ -184,7 +184,11 @@ ul > a {
 /* FORMS */
 
 .nav-padding {
-  padding-top: 15%;
+  padding-top: 12%;
+}
+
+form h3 {
+  padding-bottom: 30px;
 }
 
 form input {

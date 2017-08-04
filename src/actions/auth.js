@@ -18,7 +18,8 @@ export const login = (username, password) => dispatch => {
     })
     .then((response) => {
         if (response.status !== 200) {
-            dispatch({ type: LOGIN_FAILURE, error: response })
+            dispatch(showAlert('login', 'Incorrect username or password'))
+            throw new Error('Incorrect username or password')
         }
 
         return response.json()
@@ -27,12 +28,8 @@ export const login = (username, password) => dispatch => {
         if (window.localStorage) {
             localStorage.setItem('accessToken', response.token)
         }
-        if (response.status === 200) { 
-            dispatch({ type: LOGIN_SUCCESS, token: response.token })
-            dispatch(push('/dashboard'))
-        } else {
-            dispatch(showAlert('login', 'Incorrect username or password'))
-        }
+        dispatch({ type: LOGIN_SUCCESS, token: response.token })
+        dispatch(push('/dashboard'))        
     })
     .catch((err) => {
         dispatch({ type: LOGIN_FAILURE, error: err })

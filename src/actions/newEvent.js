@@ -1,6 +1,7 @@
 import { NEWEVENT, NEWEVENT_SUCCESS, NEWEVENT_FAILURE } from '../constants/actionTypes';
 import { BACKEND_URL } from '../constants/config';
-import { showAlert } from './ui'
+import { showAlert } from './ui';
+import { getEvents } from './getEvents';
 
 
 export const newEvent = (date, time, type, triggers, location, medication, notes) => (dispatch, getState) => {
@@ -24,6 +25,7 @@ export const newEvent = (date, time, type, triggers, location, medication, notes
     }).then((response) => {
         dispatch({ type: NEWEVENT_SUCCESS })
         dispatch(showAlert('newEvent', 'A new event was added.'))
+        dispatch(getEvents())
     }).catch(() => {
         dispatch({ type: NEWEVENT_FAILURE })
     })

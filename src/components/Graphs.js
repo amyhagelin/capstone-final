@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { getEvents } from '../actions/getEvents';
 
 import { Pie } from 'react-chartjs-2';
-import {Line} from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 // import groupBy from 'lodash/groupBy';
 import _ from 'lodash';
@@ -42,11 +42,14 @@ class Graphs extends Component {
 
         const loLineData = _.groupBy(this.props.eventLog, 'date');
         console.log(loLineData);
-        const lineData = Object.keys(loLineData).map( (date) => ({
+        const lineData = Object.keys(loLineData).map( (date) => {
+            console.log(date)
+            console.log(new Date(date))
+            return ({
             x: new Date(date),
             y: loLineData[date].length  
             })
-        );
+        });
 
         // {x: date, y: count}
 
@@ -55,13 +58,6 @@ class Graphs extends Component {
                 scales: {
                     xAxes: [{
                         type: 'time',
-                        time: {
-                            displayFormats: {
-                                quarter: 'MMM YYYY'
-                            },
-                            unit: "month"
-
-                        }
                     }]
                 }
             },
@@ -95,16 +91,11 @@ class Graphs extends Component {
 			<div>
 				Graphs Go Here
                 <Pie data={ data } />  
-                <Line data={ dataLine} />
+                <Line data={ dataLine} options={ dataLine.options }/>
 			</div>
 		);
 	}
 }
-
-
-
-
-
 
 
 

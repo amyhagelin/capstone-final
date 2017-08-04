@@ -1,5 +1,4 @@
 import * as authActions from '../constants/actionTypes'
-
 console.log(authActions.LOGIN)
 
 const initialState = {

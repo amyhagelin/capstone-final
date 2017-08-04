@@ -23,8 +23,19 @@ export class NewEvent extends React.Component {
 			triggersValue,
 			medicationValue,
 			notesValue
-			));
+		));
+		this.clearInputs();
     }
+
+	clearInputs = () => {
+		this.dateInput.value = ''
+        this.timeInput.value = ''
+		this.typeInput.value = ''
+		this.triggersInput.value = ''
+		this.locationInput.value = ''
+		this.medicationInput.value = ''
+		this.notesInput.value = ''
+	}
 
     render() {
         return (

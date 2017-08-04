@@ -24,7 +24,7 @@ export class Signup extends React.Component {
                     {/*Name: <input type="text"/>*/}
                     <input placeholder="PICK A USERNAME" type="text" ref={ input => this.usernameInput = input }/>
                     <br/>
-                    <input placeholder="PICK A PASSWORD" type="text" ref={ input => this.passwordInput = input }/>
+                    <input placeholder="PICK A PASSWORD" type="password" ref={ input => this.passwordInput = input }/>
                     <br/>
                     <button className="button" onClick={e => this.auth(e)} >
                         Sign Up
