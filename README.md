@@ -2,6 +2,8 @@
 
 EpiTrack is an app that gives people with Epilepsy an easy way to track seizures and share those records with their doctor. 
 
+[View live app.](https://shopkeeper-canyons-62124.netlify.com/)
+
 # How It Works
 
 ## Track

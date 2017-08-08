@@ -12,7 +12,6 @@ export class Log extends Component {
 		this.props.dispatch(getEvents());
 		console.log('dispatch get events from log')
 		console.log(this.props.eventLog)
-
 	}
 
 	render() {
