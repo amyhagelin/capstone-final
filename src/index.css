@@ -188,7 +188,7 @@ ul > a {
 }
 
 .dash-nav-padding {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 form h3 {
@@ -265,5 +265,27 @@ input[type=date] {
 }
 
 .graph-spacing {
-  height: 30px;
+  height: 50px;
 }
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border-left: 4px solid #253C6A;
+  border-top: 4px solid #253C6A;
+  border-right: 4px solid transparent;
+  animation: spinner .6s linear infinite;  
+}
+

@@ -37,6 +37,11 @@ class Graphs extends Component {
                 label: 'Points',
                 data: Object.keys(loPieData).map((label) => loPieData[label] && loPieData[label].length),
                 backgroundColor: this.colors,
+                // options: {
+                //     legend: {
+                //     position: 'right'
+                //     }
+                // }
             }]
         };
 
@@ -50,8 +55,6 @@ class Graphs extends Component {
             y: loLineData[date].length  
             })
         });
-
-        // {x: date, y: count}
 
         const dataLine = {
             options: {
@@ -76,7 +79,7 @@ class Graphs extends Component {
             },
             datasets: [
                 {
-                label: 'Seizure Frequency',
+                // label: 'Seizure Frequency',
                 // fill: false,
                 lineTension: 0.1,
                 backgroundColor: 'transparent',
@@ -102,10 +105,21 @@ class Graphs extends Component {
 		return (
 			<div>
                 <h2>My Dashboard</h2>
-                <div className="graph-spacing"></div>
-                    <Pie data={ data } />  
-                <div className="graph-spacing"></div>
-                    <Line className="graph" data={ dataLine} options={ dataLine.options }/>
+                { 
+                    this.props.eventLog.length 
+                    ? (
+                        <div>
+                            <div className="graph-spacing"></div>
+                            <h3>Seizure Type</h3>
+                            <Pie data={ data } />  
+                            <div className="graph-spacing"></div>
+                            <h3>Seizure Frequency</h3>
+                            <Line className="graph" data={ dataLine} options={ dataLine.options }/>
+                        </div>
+                    ) : (
+                        <div>No data</div>
+                    )
+                }
 			</div>
 		);
 	}

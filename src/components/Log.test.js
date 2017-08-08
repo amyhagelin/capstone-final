@@ -8,6 +8,16 @@ describe ('<Log />', () => {
         shallow(<Log />);
     });
 
+    it('Renders with proper data', () => {
+        const wrapper = shallow(<Log 
+            dispatch={ () => {} } 
+            eventLog={ [] }
+        />);
+
+        expect(wrapper.find('h2').length).toEqual(1)
+    });
+
+
 // I think this one is wrong - how to test compDidMount?
     it('Fires the correct dispatch', () => {
         // const callback = jest.fn();

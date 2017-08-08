@@ -30,10 +30,10 @@ export class Login extends React.Component {
                          Log In                       
                         </button>
                     </form>
-                    {/*{ isErrorForLoginPage && <Alert errorMessage={} /> }*/}
                     <div className="alert">
-                        { this.props.alert && this.props.alert.title }
+                        { this.props.ui.alert && this.props.ui.alert.title }
                     </div>
+                    { this.props.ui.isLoading && <div className="spinner"></div> }
                 </section>
             </div>
         );
@@ -44,7 +44,7 @@ export class Login extends React.Component {
 
 
 const mapStateToProps = state => ({
-    alert: state.ui.alert
+    ui: state.ui
 });
 
 

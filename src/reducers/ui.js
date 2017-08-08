@@ -1,11 +1,22 @@
 import * as actions from '../constants/actionTypes'
 
 const initialState = {
-    alert: null
+    alert: null,
+    isLoading: false
 }
 
 const ui = (state = initialState, action) => {
     switch (action.type) { 
+        case actions.SHOW_LOADER: 
+            return {
+                ...state,
+                isLoading: true
+            }
+        case actions.HIDE_LOADER: 
+            return {
+                ...state,
+                isLoading: false
+            }
         case actions.SHOW_ALERT:
             return {
                 ...state,

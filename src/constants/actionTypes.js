@@ -18,3 +18,6 @@ export const GETEVENTS_FAILURE = 'GETEVENTS_FAILURE';
 
 export const SHOW_ALERT = 'SHOW_ALERT';
 export const CLEAR_ALERT = 'CLEAR_ALERT';
+
+export const SHOW_LOADER = 'SHOW_LOADER';
+export const HIDE_LOADER = 'HIDE_LOADER';
