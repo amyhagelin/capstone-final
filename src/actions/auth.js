@@ -7,6 +7,8 @@ export const login = (username, password) => dispatch => {
     dispatch({ type: LOGIN })
     dispatch(showLoader())
 
+    console.log(fetch)
+
     fetch(`${BACKEND_URL}/users/login`, {
         method: 'POST',
         headers: {
