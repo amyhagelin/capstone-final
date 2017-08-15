@@ -7,7 +7,6 @@ export class NewEvent extends React.Component {
 
     handleNewEvent = (event) => {
         event.preventDefault();
-        console.log(this.props);
         const dateValue = this.dateInput.value;
         const timeValue = this.timeInput.value;
 		const typeValue = this.typeInput.value;

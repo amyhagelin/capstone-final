@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Event /> renders correctly 1`] = `
+<div
+  className="single-event"
+>
+  January 1, 1970
+   | 
+  6:00 pm
+   | 
+  home
+   | 
+  aura
+  <br />
+  Triggers: 
+  xyz
+   
+  <br />
+  Medication: 
+  abc
+   
+  <br />
+  Notes: 
+  def
+</div>
+`;

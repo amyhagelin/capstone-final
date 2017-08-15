@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
+import SingleEventComponent from './Event';
+
 import { Log } from './Log';
 
 describe ('<Log />', () => {
@@ -9,29 +11,34 @@ describe ('<Log />', () => {
     });
 
     it('Renders with proper data', () => {
-        const wrapper = shallow(<Log 
-            dispatch={ () => {} } 
-            eventLog={ [] }
+        const dispatch = jest.fn()
+        const wrapper = mount(<Log 
+            dispatch={ dispatch } 
+            eventLog={ [{ _id: 1 }] }
         />);
 
-        expect(wrapper.find('h2').length).toEqual(1)
+        console.log(dispatch.mock.calls[0][0]);
+
+        expect(wrapper.find(SingleEventComponent).length).toEqual(1)
     });
 
 
 // I think this one is wrong - how to test compDidMount?
     it('Fires the correct dispatch', () => {
-        // const callback = jest.fn();
-        // const wrapper = mount(<Log componentDidMount={ callback }/>);
-        // expect(callback).toHaveBeenCalled();
+        const dispatch = jest.fn();
+        const wrapper = mount(<Log dispatch={ dispatch }/>);
+        expect(dispatch).toHaveBeenCalled();
     });
 
-// not sure how to do this one
     it('Renders the single events', () => {
-        // const wrapper = shallow(<Log cards={seedCards} />);
-        // const cards = wrapper.find(Card);
-        // expect(cards.length).toEqual(seedCards.length);
-        // const firstCard = cards.first();
-        // expect(firstCard.prop('text')).toEqual(seedCards[0].text);
+        const eventLog = [{
+            _id: 0
+        }, {
+            _id: 1
+        }]
+        const wrapper = shallow(<Log eventLog={eventLog} />);
+        const eventComponents = wrapper.find(SingleEventComponent);
+        expect(eventComponents.length).toEqual(eventLog.length);
     });
 
 });

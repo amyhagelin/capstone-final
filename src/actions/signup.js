@@ -7,7 +7,7 @@ export const signup = (username, password) => dispatch => {
     dispatch({ type: SIGNUP })
     dispatch(showLoader())
 
-    fetch(`${BACKEND_URL}/users/signup`, {
+    return fetch(`${BACKEND_URL}/users/signup`, { // added return here
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

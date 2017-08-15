@@ -7,14 +7,14 @@ export const getEvents = () => (dispatch, getState) => {
     dispatch({ type: GETEVENTS })
     dispatch(showLoader())
 
-    fetch(`${BACKEND_URL}/events`, {
+    return fetch(`${BACKEND_URL}/events`, { // added return here
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'X-Access-Token': getState().auth.token
         }
     }).then((response) => 
-        response.json()
+        response.json() // do I need to add return here too?
     ).then((jsonResponse) => {
         dispatch({ type: GETEVENTS_SUCCESS, payload: jsonResponse })
         dispatch(hideLoader())

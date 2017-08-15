@@ -10,8 +10,8 @@ export class Log extends Component {
 	
 	componentDidMount () {
 		this.props.dispatch(getEvents());
-		console.log('dispatch get events from log')
-		console.log(this.props.eventLog)
+		// console.log('dispatch get events from log')
+		// console.log(this.props.eventLog)
 	}
 
 	render() {

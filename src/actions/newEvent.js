@@ -8,7 +8,7 @@ export const newEvent = (date, time, type, triggers, location, medication, notes
     dispatch({ type: NEWEVENT })
     dispatch(showLoader())
 
-    fetch(`${BACKEND_URL}/events`, {
+    return fetch(`${BACKEND_URL}/events`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
