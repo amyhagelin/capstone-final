@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Log /> renders correctly 1`] = `
+<div>
+  <h2>
+    Seizure List
+  </h2>
+  <div
+    className="single-event"
+  >
+    August 16, 2017
+     | 
+     | 
+     | 
+    <br />
+    Triggers: 
+     
+    <br />
+    Medication: 
+     
+    <br />
+    Notes: 
+  </div>
+  <div
+    className="single-event"
+  >
+    August 16, 2017
+     | 
+     | 
+     | 
+    <br />
+    Triggers: 
+     
+    <br />
+    Medication: 
+     
+    <br />
+    Notes: 
+  </div>
+</div>
+`;

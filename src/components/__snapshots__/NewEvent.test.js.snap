@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewEvent /> renders correctly 1`] = `
+<div>
+  <h2>
+    Add New Event
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="inline-block"
+    >
+      <input
+        placeholder="DATE"
+        type="date"
+      />
+      <br />
+      <input
+        placeholder="TIME"
+        type="text"
+      />
+      <br />
+      <select
+        name="type"
+      >
+        <option
+          disabled={true}
+          selected={true}
+          value=""
+        >
+          SEIZURE TYPE
+        </option>
+        <option
+          value="Aura"
+        >
+          Aura
+        </option>
+        <option
+          value="Absence"
+        >
+          Absence
+        </option>
+        <option
+          value="Atonic-"
+        >
+          Atonic
+        </option>
+        <option
+          value="Clonic"
+        >
+          Clonic
+        </option>
+        <option
+          value="Myoclonic"
+        >
+          Myoclonic
+        </option>
+        <option
+          value="Tonic"
+        >
+          Tonic
+        </option>
+        <option
+          value="Tonic-clonic"
+        >
+          Tonic-Clonic
+        </option>
+      </select>
+      <br />
+      <input
+        placeholder="TRIGGERS"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      className="inline-block"
+    >
+      <input
+        placeholder="LOCATION"
+        type="text"
+      />
+      <br />
+      <input
+        placeholder="CURRENT MEDICATION"
+        type="text"
+      />
+      <br />
+      <input
+        placeholder="NOTES"
+        type="text"
+      />
+      <br />
+      <button
+        className="button"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+  <div
+    className="alert"
+  />
+</div>
+`;

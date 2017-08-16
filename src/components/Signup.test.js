@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 
 import { Signup } from './Signup';
 
-xdescribe ('<Signup />', () => {
+describe ('<Signup />', () => {
     it('Renders without crashing', () => {
         shallow(<Signup />);
     });

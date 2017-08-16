@@ -1,13 +1,26 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import SingleEventComponent from './Event';
-
+import { MemoryRouter } from 'react-router'
+import {history } from '../store'
 import { Log } from './Log';
 
 describe ('<Log />', () => {
-    it('Renders without crashing', () => {
-        shallow(<Log />);
+
+    it('renders correctly', () => {
+        const eventLog = [{
+                _id: 0
+            }, {
+                _id: 1
+            }]
+        const tree = renderer.create(
+            <MemoryRouter history={history}>
+                <Log eventLog={ eventLog } dispatch={ () => {} } />
+            </MemoryRouter>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
     it('Renders with proper data', () => {
@@ -22,8 +35,6 @@ describe ('<Log />', () => {
         expect(wrapper.find(SingleEventComponent).length).toEqual(1)
     });
 
-
-// I think this one is wrong - how to test compDidMount?
     it('Fires the correct dispatch', () => {
         const dispatch = jest.fn();
         const wrapper = mount(<Log dispatch={ dispatch }/>);

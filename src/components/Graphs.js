@@ -9,7 +9,7 @@ import { Line } from 'react-chartjs-2';
 import _ from 'lodash';
 
 
-class Graphs extends Component {
+export class Graphs extends Component {
 
     componentDidMount () {
 		this.props.dispatch(getEvents());
@@ -30,7 +30,6 @@ class Graphs extends Component {
 	render() {
 
         const loPieData = _.groupBy(this.props.eventLog, 'type');
-       
         const data = {
             labels: Object.keys(loPieData),
             datasets: [{
@@ -46,10 +45,7 @@ class Graphs extends Component {
         };
 
         const loLineData = _.groupBy(this.props.eventLog, 'date');
-        console.log(loLineData);
         const lineData = Object.keys(loLineData).map( (date) => {
-            console.log(date)
-            console.log(new Date(date))
             return ({
             x: new Date(date),
             y: loLineData[date].length  

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> renders correctly 1`] = `
+<div>
+  <header>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+  </header>
+  <section
+    className="min-height abstract-background"
+  >
+    <form
+      className="nav-padding"
+    >
+      <h3>
+        To enter demo mode use Username: demomode / Password: 123
+      </h3>
+      <input
+        placeholder="YOUR USERNAME"
+        type="text"
+      />
+      <br />
+      <input
+        placeholder="YOUR PASSWORD"
+        type="password"
+      />
+      <br />
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Log In
+      </button>
+    </form>
+    <div
+      className="alert"
+    />
+  </section>
+</div>
+`;
