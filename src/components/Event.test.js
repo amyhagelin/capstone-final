@@ -7,7 +7,7 @@ describe ('<Event />', () => {
     it('renders correctly', () => {
          const event = {
             date: new Date(123),
-            time: '6:00 pm',
+            time: '5:00 pm',
             type: 'aura',
             triggers: 'xyz',
             location: 'home',
