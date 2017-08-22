@@ -62,7 +62,7 @@ header a {
   text-decoration: none;
   margin-right: 30px;
   margin-top: 30px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 header a:hover {
@@ -100,6 +100,11 @@ div.graphs {
   text-align: center;
 }
 
+.welcome-text a {
+  color: black;
+  text-decoration: none;
+}
+
 .button {
   width: 240px;
   height: 40px;
@@ -127,6 +132,10 @@ div.graphs {
 
 .why-track {
   background-color: white;
+}
+
+.why-track a {
+  color: black;
 }
 
 .why-track ul {
@@ -236,7 +245,8 @@ input[type=date] {
 .single-event {
   border: 2px solid #253C6A;
   background-color: white;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   margin-bottom: 30px;
   text-align: left;

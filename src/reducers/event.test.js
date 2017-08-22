@@ -2,7 +2,6 @@ import event from './event'
 import { getEvents } from '../actions/getEvents'
 import { GETEVENTS_SUCCESS } from '../constants/actionTypes'
 
-// is not working
 
 describe('event reducer', () => {
     it('should test getEvents success', () => {

@@ -18,12 +18,14 @@ const LandingPage = () => (
                 <br/>
                 <div className="button"><Link to="/login">Log in to Demo Mode</Link></div>
                 <br/>
-                <h3>Learn More</h3>
-                <br/>
-                <img className="arrow" src={require("../images/downarrow.png")} alt="down arrow"/>
+                <a href="#why-track">
+                    <h3>Learn More</h3>
+                    <br/>
+                    <img className="arrow" src={require("../images/downarrow.png")} alt="down arrow"/>
+                </a>
             </div>
         </section>
-        <section className="why-track">
+        <section className="why-track" id="why-track">
             <div className="content">
             <img className="icon" src={require("../images/icon.jpg")} alt="log icon"/>
             <br/>
