@@ -17,13 +17,16 @@ export const signup = (username, password) => dispatch => {
             password
         })
     }).then((response) => {
+        if (response.status !== 200) {
+            throw new Error('User not created sucessfully')
+        }
         dispatch({ type: SIGNUP_SUCCESS });
         dispatch(hideLoader())
         dispatch(login(username, password));
-    }).catch(() => {
+    }).catch((e) => {
         dispatch({ type: SIGNUP_FAILURE });
         dispatch(hideLoader())
         dispatch(showAlert('signup', 'New user was not created successfully. Please try again.'))
-        setTimeout(function(){dispatch(clearAlert())}, 3000)
+        setTimeout(function(){dispatch(clearAlert())}, 5000)
     })
 }
