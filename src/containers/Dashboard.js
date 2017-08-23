@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => (
     <div>
-        <header>
+        <header className='dash-header'>
             <Navbar />
         </header>
         <section className="dash-nav-padding" >
