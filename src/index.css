@@ -11,10 +11,6 @@ bright red: #F20100
 muted red: #F82D40
 */
 
-@media (max-width: 960px) {
-  header li { color: green; }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -53,16 +49,12 @@ section {
 
 header {
   text-align: right;
-  height: 40px;
+  min-height: 40px;
   background-color: #253C6A;
   width: 100%;
   position: fixed;
   vertical-align: center;
   padding-top: 10px;
-}
-
-header li {
-  display: inline-block;
 }
 
 header a {
@@ -76,6 +68,32 @@ header a {
 header a:hover {
   color: #F82D40;
 }
+
+header button {
+  float: left;
+  margin-left: 10px;
+  width: 50px;
+  height: 30px;
+  background-color: #253C6A;
+  border: 2px solid white;
+  color: white;
+}
+
+.navWide {
+  display: none;
+}
+
+.narrowLinks {
+    display: none;
+  }
+
+.narrowLinks a {
+    display: block;
+    float: left;
+    clear: left;
+    line-height: 7px;
+    padding-left: 20px;
+  }
 
 .abstract-background {
   background-image: url("./images/abstractmirror.jpg");
@@ -262,9 +280,9 @@ input[type=date] {
   padding: 15px;
 }
 
-#share {
+/*#share {
   padding-bottom: 100px;
-}
+}*/
 
 .blue {
   background-color: #C2EEF1;
@@ -284,6 +302,10 @@ input[type=date] {
 
 .graph-spacing {
   height: 50px;
+}
+
+.share {
+  height: 200px;
 }
 
 @keyframes spinner {
@@ -307,3 +329,12 @@ input[type=date] {
   animation: spinner .6s linear infinite;  
 }
 
+@media (max-width: 960px) {
+  div.graphs { padding: 5px }
+  div.single-event { width: 295px }
+}
+
+@media (min-width: 480px) {
+  .navWide { display: block }
+  .navNarrow { display: none }
+}

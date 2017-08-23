@@ -75,7 +75,7 @@ export class Graphs extends Component {
             },
             datasets: [
                 {
-                // label: 'Seizure Frequency',
+                label: '',
                 // fill: false,
                 lineTension: 0.1,
                 backgroundColor: 'transparent',

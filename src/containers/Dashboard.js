@@ -1,20 +1,14 @@
 import React from 'react'
 import NewEvent from '../components/NewEvent'
 import Log from '../components/Log'
-import Logout from '../components/Logout'
+import Navbar from '../components/Navbar'
 import Graphs from '../components/Graphs'
 import { Link } from 'react-router-dom'
 
 const Dashboard = () => (
     <div>
         <header>
-            <ul>
-                <li><a href="#graphs">Graphs</a></li>
-                <li><a href="#new">Add New</a></li>
-                <li><a href="#log">List</a></li>
-                <li><a href="#share">Share</a></li>
-                <li><Logout /></li>
-            </ul>
+            <Navbar />
         </header>
         <section className="dash-nav-padding" >
             <div id="graphs" className="content graphs"><Graphs /></div>
@@ -26,7 +20,9 @@ const Dashboard = () => (
             <div id="log" className="content"><Log /></div>
         </section>
         <section  className="blue">
-            <Link id="share" to="/print" className="button">View Printable List</Link>
+            <div className="share">
+                <Link id="share" to="/print" className="button">View Printable List</Link>
+            </div>
         </section>
     </div>
 )
