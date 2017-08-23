@@ -6,22 +6,23 @@ import SingleEventComponent from './Event';
 import { MemoryRouter } from 'react-router'
 import {history } from '../store'
 import { Log } from './Log';
-import { ConnectedRouter } from 'react-router-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-xdescribe ('<Log />', () => {
+describe ('<Log />', () => {
 
     it('renders correctly', () => {
         const eventLog = [{
-                _id: 0,
+            _id: 0,
             date: new Date(123)
-            }, {
-                _id: 1,
+        }, {
+            _id: 1,
             date: new Date(123)
-            }]
+        }]
+        const dispatch = jest.fn()
         const tree = renderer.create(
-            <ConnectedRouter history={history}>
-                <Log eventLog={ eventLog } dispatch={ () => {} } />
-            </ConnectedRouter>
+            <Router>
+                <Log eventLog={ eventLog } dispatch={ dispatch } />
+            </Router>
         ).toJSON();
         expect(tree).toMatchSnapshot();
     });

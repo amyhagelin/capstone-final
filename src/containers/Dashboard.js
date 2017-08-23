@@ -8,23 +8,25 @@ import { Link } from 'react-router-dom'
 const Dashboard = () => (
     <div>
         <header>
-            <a href="#graphs">Graphs</a>
-            <a href="#new">Add New</a>
-            <a href="#log">List</a>
-            <a href="#share">Share</a>
-            <Logout />
+            <ul>
+                <li><a href="#graphs">Graphs</a></li>
+                <li><a href="#new">Add New</a></li>
+                <li><a href="#log">List</a></li>
+                <li><a href="#share">Share</a></li>
+                <li><Logout /></li>
+            </ul>
         </header>
-        <section id="graphs" className="dash-nav-padding" >
-            <div className="content graphs"><Graphs /></div>
+        <section className="dash-nav-padding" >
+            <div id="graphs" className="content graphs"><Graphs /></div>
         </section>
-        <section id="new" className="abstract-background">
-            <div className="content"><NewEvent /></div>
+        <section className="abstract-background">
+            <div id="new" className="content"><NewEvent /></div>
         </section>
-        <section id="log" className="blue">
-            <div className="content"><Log /></div>
+        <section className="blue">
+            <div id="log" className="content"><Log /></div>
         </section>
-        <section id="share" className="blue">
-            <Link to="/print" className="button">View Printable List</Link>
+        <section  className="blue">
+            <Link id="share" to="/print" className="button">View Printable List</Link>
         </section>
     </div>
 )

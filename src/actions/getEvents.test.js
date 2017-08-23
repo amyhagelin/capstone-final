@@ -1,9 +1,6 @@
 import { getEvents } from './getEvents'
 import { GETEVENTS, GETEVENTS_SUCCESS, GETEVENTS_FAILURE } from '../constants/actionTypes';
 
-// tried to get this to work but got error about getStore that I don't understand
-// added return to fetch in action
-
 describe('get events action', () => {
     it('Should dispatch getEvents', () => {
         const dispatch = jest.fn();

@@ -17,15 +17,17 @@ exports[`<Login /> renders correctly 1`] = `
       className="nav-padding"
     >
       <h3>
-        To enter demo mode use Username: demomode / Password: 123
+        To enter demo mode use
+        <br />
+        Username: demomode / Password: 123
       </h3>
       <input
-        placeholder="YOUR USERNAME"
+        placeholder="Your Username"
         type="text"
       />
       <br />
       <input
-        placeholder="YOUR PASSWORD"
+        placeholder="Your Password"
         type="password"
       />
       <br />

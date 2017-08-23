@@ -12,12 +12,12 @@ exports[`<NewEvent /> renders correctly 1`] = `
       className="inline-block"
     >
       <input
-        placeholder="DATE"
+        placeholder="Date"
         type="date"
       />
       <br />
       <input
-        placeholder="TIME"
+        placeholder="Time"
         type="text"
       />
       <br />
@@ -29,7 +29,7 @@ exports[`<NewEvent /> renders correctly 1`] = `
           selected={true}
           value=""
         >
-          SEIZURE TYPE
+          Seizure Type
         </option>
         <option
           value="Aura"
@@ -69,7 +69,7 @@ exports[`<NewEvent /> renders correctly 1`] = `
       </select>
       <br />
       <input
-        placeholder="TRIGGERS"
+        placeholder="Triggers"
         type="text"
       />
       <br />
@@ -78,17 +78,17 @@ exports[`<NewEvent /> renders correctly 1`] = `
       className="inline-block"
     >
       <input
-        placeholder="LOCATION"
+        placeholder="Location"
         type="text"
       />
       <br />
       <input
-        placeholder="CURRENT MEDICATION"
+        placeholder="Current Medication"
         type="text"
       />
       <br />
       <input
-        placeholder="NOTES"
+        placeholder="Notes"
         type="text"
       />
       <br />

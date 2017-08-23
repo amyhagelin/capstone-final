@@ -8,7 +8,7 @@ exports[`<Log /> renders correctly 1`] = `
   <div
     className="single-event"
   >
-    August 16, 2017
+    January 1, 1970
      | 
      | 
      | 
@@ -24,7 +24,7 @@ exports[`<Log /> renders correctly 1`] = `
   <div
     className="single-event"
   >
-    August 16, 2017
+    January 1, 1970
      | 
      | 
      | 

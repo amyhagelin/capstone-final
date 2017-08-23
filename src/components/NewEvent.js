@@ -42,10 +42,10 @@ export class NewEvent extends React.Component {
 				<h2>Add New Event</h2>
               <form onSubmit={ this.handleNewEvent }>
 				<div className="inline-block">
-				<input placeholder="DATE" type="date" ref={ input => this.dateInput = input } /><br />
-				<input placeholder="TIME" type="text" ref={ input => this.timeInput = input } /><br />
+				<input placeholder="Date" type="date" ref={ input => this.dateInput = input } /><br />
+				<input placeholder="Time" type="text" ref={ input => this.timeInput = input } /><br />
 				<select name="type" ref={ input => this.typeInput = input }>
-					<option value="" disabled selected>SEIZURE TYPE</option>
+					<option value="" disabled selected>Seizure Type</option>
 					<option value="Aura">Aura</option>
 		 			<option value="Absence">Absence</option>
 		  			<option value="Atonic-">Atonic</option>
@@ -55,12 +55,12 @@ export class NewEvent extends React.Component {
 		  			<option value="Tonic-clonic">Tonic-Clonic</option>
 	  			</select>
 	  			<br />
-				<input placeholder="TRIGGERS" type="text" ref={ input => this.triggersInput = input } /><br />
+				<input placeholder="Triggers" type="text" ref={ input => this.triggersInput = input } /><br />
 				</div>
 				<div className="inline-block">
-				<input placeholder="LOCATION" type="text" ref={ input => this.locationInput = input } /><br />
-				<input placeholder="CURRENT MEDICATION" type="text" ref={ input => this.medicationInput = input } /><br />
-				<input placeholder="NOTES"type="text" ref={ input => this.notesInput = input } /><br />
+				<input placeholder="Location" type="text" ref={ input => this.locationInput = input } /><br />
+				<input placeholder="Current Medication" type="text" ref={ input => this.medicationInput = input } /><br />
+				<input placeholder="Notes"type="text" ref={ input => this.notesInput = input } /><br />
 				<button className="button">Save</button>
 				</div>
 			    </form>

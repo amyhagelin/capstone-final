@@ -11,6 +11,10 @@ bright red: #F20100
 muted red: #F82D40
 */
 
+@media (max-width: 960px) {
+  header li { color: green; }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,6 +59,10 @@ header {
   position: fixed;
   vertical-align: center;
   padding-top: 10px;
+}
+
+header li {
+  display: inline-block;
 }
 
 header a {

@@ -22,9 +22,9 @@ export class Signup extends React.Component {
                 <section className="min-height abstract-background">
                 <form className="nav-padding">
                     {/*Name: <input type="text"/>*/}
-                    <input placeholder="PICK A USERNAME" type="text" ref={ input => this.usernameInput = input }/>
+                    <input placeholder="Pick a Username" type="text" ref={ input => this.usernameInput = input }/>
                     <br/>
-                    <input placeholder="PICK A PASSWORD" type="password" ref={ input => this.passwordInput = input }/>
+                    <input placeholder="Pick a Password" type="password" ref={ input => this.passwordInput = input }/>
                     <br/>
                     <button className="button" onClick={e => this.auth(e)} >
                         Sign Up

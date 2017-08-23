@@ -16,10 +16,6 @@ describe ('<Logout />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    // it('Renders without crashing', () => {
-    //     shallow(<Logout />);
-    // });
-
     it('Renders with proper data', () => {
         const wrapper = shallow(<Logout 
             dispatch={ () => {} } 
